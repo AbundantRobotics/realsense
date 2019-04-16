@@ -1,0 +1,8 @@
+<launch>
+  <node
+    name="t265_static_broadcast"
+    type="static_transform_publisher"
+    pkg="tf"
+    args="0.0965716 -0.777238 0.790518 0 0 0 1 odom camera_pose_frame"
+  />
+</launch>

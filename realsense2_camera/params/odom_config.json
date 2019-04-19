@@ -11,7 +11,7 @@
         "T": [ // translation (in meters)
           0.0965716,
           -0.777238,
-          0.790518
+          0.760518
         ],
         "T_variance": [ // currently not used, please ignore
           9.999999974752427e-7, 
@@ -21,7 +21,7 @@
         "W": [ // orientation in axis-angle representation, axis x angle (in rad)
           0.0,
           0.0,
-          0.0
+          -1.5707963267948966
         ],
         "W_variance": [ // currently not used, please ignore
           9.999999974752427e-5, 

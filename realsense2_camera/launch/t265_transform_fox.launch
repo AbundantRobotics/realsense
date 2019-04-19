@@ -5,4 +5,10 @@
     pkg="tf"
     args="0.0965716 -0.777238 0.760518 -1.570796327 0 0 base_link camera_pose_frame 10"
   />
+  <node
+    name="t265_static_broadcast_2"
+    type="static_transform_publisher"
+    pkg="tf"
+    args="0.0965716 -0.777238 0.760518 -1.570796327 0 0 odom camera_odom_frame 10"
+  />
 </launch>

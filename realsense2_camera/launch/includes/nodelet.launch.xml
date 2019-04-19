@@ -158,7 +158,7 @@
     <param name="odom_frame_id"            type="str"  value="$(arg odom_frame_id)"/>
     <param name="topic_odom_in"            type="str"  value="$(arg topic_odom_in)"/>
     <param name="calib_odom_file"          type="str"    value="$(arg calib_odom_file)"/>
-    <param name="publish_odom_tf"          type="bool" value="$(arg publish_odom_tf)"/>
+    <param name="publish_odom_tf"          type="bool" value="false"/>
     <param name="filters"                  type="str"    value="$(arg filters)"/>
     <param name="clip_distance"            type="double" value="$(arg clip_distance)"/>
     <param name="linear_accel_cov"         type="double" value="$(arg linear_accel_cov)"/>

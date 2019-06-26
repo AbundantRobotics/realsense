@@ -38,28 +38,23 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
       <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
       <arg name="serial_no"                value="$(arg serial_no)"/>
       <arg name="json_file_path"           value="$(arg json_file_path)"/>
-
       <arg name="enable_sync"              value="$(arg enable_sync)"/>
-
       <arg name="fisheye_width"            value="$(arg fisheye_width)"/>
       <arg name="fisheye_height"           value="$(arg fisheye_height)"/>
       <arg name="enable_fisheye1"          value="$(arg enable_fisheye1)"/>
       <arg name="enable_fisheye2"          value="$(arg enable_fisheye2)"/>
-
       <arg name="fisheye_fps"              value="$(arg fisheye_fps)"/>
       <arg name="gyro_fps"                 value="$(arg gyro_fps)"/>
       <arg name="accel_fps"                value="$(arg accel_fps)"/>
       <arg name="enable_gyro"              value="$(arg enable_gyro)"/>
       <arg name="enable_accel"             value="$(arg enable_accel)"/>
-
       <arg name="linear_accel_cov"         value="$(arg linear_accel_cov)"/>
       <arg name="initial_reset"            value="$(arg initial_reset)"/>
       <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
-
-      <param name="odom_frame_id"          type="str"  value="$(arg odom_frame_id)"/>
-      <param name="topic_odom_in"          type="str"  value="$(arg topic_odom_in)"/>
-      <param name="calib_odom_file"        type="str"  value="$(arg calib_odom_file)"/>
-      <param name="publish_odom_tf"        type="bool" value="$(arg publish_odom_tf)"/>
+      <arg name="odom_frame_id"          type="str"  value="$(arg odom_frame_id)"/>
+      <arg name="topic_odom_in"          type="str"  value="$(arg topic_odom_in)"/>
+      <arg name="calib_odom_file"        type="str"  value="$(arg calib_odom_file)"/>
+      <arg name="publish_odom_tf"        type="bool" value="$(arg publish_odom_tf)"/>
     </include>
   </group>
 </launch>

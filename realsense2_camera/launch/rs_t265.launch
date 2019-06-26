@@ -51,10 +51,10 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
       <arg name="linear_accel_cov"         value="$(arg linear_accel_cov)"/>
       <arg name="initial_reset"            value="$(arg initial_reset)"/>
       <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
-      <arg name="odom_frame_id"          type="str"  value="$(arg odom_frame_id)"/>
-      <arg name="topic_odom_in"          type="str"  value="$(arg topic_odom_in)"/>
-      <arg name="calib_odom_file"        type="str"  value="$(arg calib_odom_file)"/>
-      <arg name="publish_odom_tf"        type="bool" value="$(arg publish_odom_tf)"/>
+      <arg name="odom_frame_id"            value="$(arg odom_frame_id)"/>
+      <arg name="topic_odom_in"            value="$(arg topic_odom_in)"/>
+      <arg name="calib_odom_file"          value="$(arg calib_odom_file)"/>
+      <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
     </include>
   </group>
 </launch>

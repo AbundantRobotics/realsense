@@ -9,9 +9,7 @@
       "noise_variance": 0.004445126050420168, // measurement covariance (to be determined/tuned)
       "extrinsics": { // relative transformation of sensor frame w.r.t. T265 body frame
         "T": [ // translation (in meters)
-          0.0965716,
-          -0.777238,
-          0.760518
+          0.000, -0.570, -0.218
         ],
         "T_variance": [ // currently not used, please ignore
           9.999999974752427e-7, 
@@ -19,9 +17,7 @@
           9.999999974752427e-7
         ],
         "W": [ // orientation in axis-angle representation, axis x angle (in rad)
-          0.0,
-          0.0,
-          -1.5707963267948966
+          -0.34975051, 0.0, 0.0
         ],
         "W_variance": [ // currently not used, please ignore
           9.999999974752427e-5, 

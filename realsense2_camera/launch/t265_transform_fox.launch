@@ -1,33 +1,20 @@
 <launch>
-  <node
-    name="t265_static_broadcast"
+  <!-- <node
+    name="$(anon vo_sensor)"
     type="static_transform_publisher"
     pkg="tf2_ros"
     args="0.0965716 -0.777238 0.760518 -1.570796327 0 0 base_link camera_pose_frame"
-  />
+  /> -->
   <node
-    name="t265_static_broadcast_2"
+    name="$(anon vo_sensor)"
     type="static_transform_publisher"
     pkg="tf2_ros"
-    args="0.0965716 -0.777238 0.760518 -1.570796327 0 0 odom camera_odom_frame"
+    args="0.0 0.46035 0.4 -0.405580 0.405580 0.579228 0.579228 odom camera_odom_frame"
   />
-  <arg
-    name="model" />
-  <arg
-    name="gui"
-    default="False" />
-  <param
-    name="robot_description"
-    textfile="$(find fox1_urdf)/urdf/fox1_urdf.urdf" />
-  <param
-    name="use_gui"
-    value="$(arg gui)" />
   <node
-    name="joint_state_publisher"
-    pkg="joint_state_publisher"
-    type="joint_state_publisher" />
-  <node 
-    name="robot_state_publisher"
-    pkg="robot_state_publisher"
-    type="state_publisher" />
+    name="$(anon vo_sensor1)"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.46035 0.4  0.174 0.000 0.000 0.985 odom camera_odom_optical_frame"
+  />
 </launch>

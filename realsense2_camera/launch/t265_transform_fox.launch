@@ -12,10 +12,16 @@
     args="0.0 0.46035 0.4 -0.405580 0.405580 0.579228 0.579228 odom camera_odom_frame"
   /> -->
   <node
+    name="$(anon vo_sensor4)"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.46035 0.4 -0.405580 0.405580 0.579228 0.579228 odom camera_odom_frame"
+  />
+  <node
     name="$(anon vo_sensor)"
     type="static_transform_publisher"
     pkg="tf2_ros"
-    args="0.0 0.46035 0.4 0.0 0.0 0.707107 0.707107 odom camera_odom_frame"
+    args="0.0 0.46035 0.4 0.0 0.0 0.707107 0.707107 odom camera_odom"
   />
   <node
     name="$(anon vo_sensor1)"
@@ -27,7 +33,7 @@
     name="$(anon vo_sensor2)"
     type="static_transform_publisher"
     pkg="tf2_ros"
-    args="0.0 0.0 0.0 0.500000 -0.500000 -0.500000 0.500000 camera_odom_frame vo_optical"
+    args="0.0 0.0 0.0 0.500000 -0.500000 -0.500000 0.500000 camera_odom vo_optical"
   />
   <node
     name="$(anon vo_sensor3)"

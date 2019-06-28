@@ -25,7 +25,7 @@ https://github.com/IntelRealSense/librealsense/blob/master/third-party/libtm/lib
   <arg name="enable_sync"           default="false"/>
 
   <arg name="linear_accel_cov"      default="0.01"/>
-  <arg name="initial_reset"         default="false"/>
+  <arg name="initial_reset"         default="true"/>
   <arg name="unite_imu_method"      default=""/>
 
   <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>

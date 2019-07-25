@@ -1,9 +1,11 @@
 <launch>
-  <arg name="camera"              default="camera"/>
+  <arg name="robot_id" default="2"/>
+  <arg name="serial_no" default="905312111380">
+  <arg name="camera"              default="visual_odom"/>
   <arg name="tf_prefix"           default="$(arg camera)"/>
   <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>
   <arg name="topic_odom_in"            default="/leadfoot/zippy/wheel_odom"/>
-  <arg name="calib_odom_file"          default="$(find realsense2_camera)/params/odom_config.json"/>
+  <arg name="calib_odom_file"          default="$(find realsense2_camera)/launch/fox$(arg robot_id)/odom_config.json"/>
   <arg name="publish_odom_tf"          default="false"/>
   <include file="$(find realsense2_camera)/launch/rs_t265.launch">
     <arg name="odom_frame_id"            value="$(arg odom_frame_id)"/>
@@ -18,7 +20,7 @@
     name="odom_transform"
     pkg="realsense2_camera"
     type="odom_transform"
-    args="camera/odom/sample odom camera_odom_frame"
+    args="$(arg camera)/odom/sample odom camera_odom_frame"
     required="true"
   >
     <remap from="odometry_transformed" to="leadfoot/zippy/visual_odom"/>

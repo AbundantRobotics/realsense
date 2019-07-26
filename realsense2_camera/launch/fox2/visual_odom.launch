@@ -8,6 +8,7 @@
   <arg name="calib_odom_file"          default="$(find realsense2_camera)/launch/fox$(arg robot_id)/odom_config.json"/>
   <arg name="publish_odom_tf"          default="false"/>
   <include file="$(find realsense2_camera)/launch/rs_t265.launch">
+    <arg name="serial_no"                value="$(arg serial_no)"/>
     <arg name="camera"                   value="$(arg camera)"/>
     <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
     <arg name="odom_frame_id"            value="$(arg odom_frame_id)"/>

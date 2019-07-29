@@ -1,6 +1,6 @@
 <launch>
   <arg name="robot_id"                 default="2"/>
-  <arg name="serial_no"                default="905312111380"/>
+  <arg name="serial_no"                default="905312111008"/>
   <arg name="camera"                   default="visual_odom"/>
   <arg name="tf_prefix"                default="$(arg camera)"/>
   <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>

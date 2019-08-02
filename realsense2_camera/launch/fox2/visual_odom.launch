@@ -4,8 +4,9 @@
   <arg name="camera"                   default="visual_odom"/>
   <arg name="tf_prefix"                default="$(arg camera)"/>
   <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>
-  <arg name="topic_odom_in"            default="/leadfoot/zippy/wheel_odom"/>
+  <arg name="topic_odom_in"            default="/leadfoot/zippy/odom_in_vo_frame"/>
   <arg name="calib_odom_file"          default="$(find realsense2_camera)/launch/fox$(arg robot_id)/odom_config.json"/>
+  <!-- <arg name="calib_odom_file"          default=""/> -->
   <arg name="publish_odom_tf"          default="false"/>
   <include file="$(find realsense2_camera)/launch/rs_t265.launch">
     <arg name="serial_no"                value="$(arg serial_no)"/>
@@ -20,13 +21,22 @@
   <include file="$(find realsense2_camera)/launch/fox$(arg robot_id)/t265_transform_fox.launch"/>
 
   <node
-    name="odom_transform"
+    name="vo_transform"
     pkg="realsense2_camera"
     type="odom_transform"
     args="$(arg camera)/odom/sample odom camera_odom_frame"
     required="true"
   >
     <remap from="odometry_transformed" to="leadfoot/zippy/visual_odom"/>
+  </node>
+    <node
+    name="odom_vo_input"
+    pkg="realsense2_camera"
+    type="odom_to_vo"
+    args="/leadfoot/zippy/wheel_odom camera_odom_frame odom"
+    required="true"
+  >
+    <remap from="odometry_transformed" to="leadfoot/zippy/odom_in_vo_frame"/>
   </node>
 
 </launch>

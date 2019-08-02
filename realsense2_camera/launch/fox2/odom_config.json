@@ -1,25 +1,25 @@
 {
-  "velocimeters": [ // array of velocity sensors (currently max. 2 supported)
+  "velocimeters": [
     {
-      "scale_and_alignment": [ // 3-by-3 matrix, row-major (multiplies measurement)
+      "scale_and_alignment": [
         1.0, 0.0, 0.0,
         0.0, 1.0, 0.0,
         0.0, 0.0, 1.0
       ],
-      "noise_variance": 0.004445126050420168, // measurement covariance (to be determined/tuned)
-      "extrinsics": { // relative transformation of sensor frame w.r.t. T265 body frame
-        "T": [ // translation (in meters)
-          -0.01275, 0.50340831, -0.10516654
+      "noise_variance": 0.004445126050420168,
+      "extrinsics": {
+        "T": [
+          0.0,0.0,0.0
         ],
-        "T_variance": [ // currently not used, please ignore
+        "T_variance": [
           9.999999974752427e-7,
           9.999999974752427e-7,
           9.999999974752427e-7
         ],
-        "W": [ // orientation in axis-angle representation, axis x angle (in rad)
-          0.0, -0.54553184, 3.0938648
+        "W": [
+          0.0, 0.0, 0.0
         ],
-        "W_variance": [ // currently not used, please ignore
+        "W_variance": [
           9.999999974752427e-5,
           9.999999974752427e-5,
           9.999999974752427e-5

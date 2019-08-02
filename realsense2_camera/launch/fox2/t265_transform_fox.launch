@@ -15,7 +15,7 @@
     name="vo_sensor4"
     type="static_transform_publisher"
     pkg="tf2_ros"
-    args="-0.01275  0.43708  0.271 -0.122788 0.122788 0.696364 0.696364 odom camera_odom_frame"
+    args="-3.68947 -0.09623  1.76474 0.000000 0.000000 1.000000 0.000000 odom camera_odom_frame"
   />
   <node
     name="vo_sensor"

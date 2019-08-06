@@ -7,6 +7,7 @@
   <arg name="topic_odom_in"            default="/leadfoot/zippy/wheel_odom"/>
   <arg name="calib_odom_file"          default="$(find realsense2_camera)/launch/fox$(arg robot_id)/odom_config.json"/>
   <arg name="publish_odom_tf"          default="false"/>
+  <arg name="unite_imu_method"         default="linear_interpolation"/>
   <include file="$(find realsense2_camera)/launch/rs_t265.launch">
     <arg name="serial_no"                value="$(arg serial_no)"/>
     <arg name="camera"                   value="$(arg camera)"/>
@@ -15,6 +16,7 @@
     <arg name="topic_odom_in"            value="$(arg topic_odom_in)"/>
     <arg name="calib_odom_file"          value="$(arg calib_odom_file)"/>
     <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
+    <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
   </include>
 
   <include file="$(find realsense2_camera)/launch/fox$(arg robot_id)/t265_transform_fox.launch"/>

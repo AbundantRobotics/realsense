@@ -1,0 +1,44 @@
+<launch>
+  <!-- <node
+    name="vo_sensor"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0965716 -0.777238 0.760518 -1.570796327 0 0 base_link camera_pose_frame"
+  /> -->
+  <!-- <node
+    name="vo_sensor"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.46035 0.4 -0.405580 0.405580 0.579228 0.579228 odom camera_odom_frame"
+  /> -->
+  <node
+    name="vo_sensor4"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="-0.01275  0.43708  0.271 0.579228 0.579228 -0.405580 0.405580 odom camera_odom_frame"
+  />
+  <node
+    name="vo_sensor"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.46035 0.4 0.0 0.0 0.707107 0.707107 odom camera_odom"
+  />
+  <node
+    name="vo_sensor1"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.46035 0.4  0.174 0.000 0.000 0.985 odom camera_odom_optical_frame"
+  />
+  <node
+    name="vo_sensor2"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.0 0.0 0.500000 -0.500000 -0.500000 0.500000 camera_odom vo_optical"
+  />
+  <node
+    name="vo_sensor3"
+    type="static_transform_publisher"
+    pkg="tf2_ros"
+    args="0.0 0.0 0.0 -0.573576 0.000000 0.000000 0.819152 vo_optical vo_mount"
+  />
+</launch>

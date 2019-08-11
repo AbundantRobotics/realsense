@@ -1,0 +1,36 @@
+<launch>
+  <arg name="robot_id"                 default="2"/>
+  <arg name="serial_no"                default="905312111172"/>
+  <arg name="camera"                   default="visual_odom"/>
+  <arg name="tf_prefix"                default="$(arg camera)"/>
+  <arg name="odom_frame_id"            default="$(arg tf_prefix)_odom_frame"/>
+  <!-- <arg name="topic_odom_in"            default="/leadfoot/zippy/wheel_odom"/> -->
+  <arg name="topic_odom_in"            default=""/>
+  <arg name="calib_odom_file"          default="$(find realsense2_camera)/launch/fox$(arg robot_id)/odom_config.json"/>
+  <arg name="publish_odom_tf"          default="false"/>
+  <arg name="unite_imu_method"         default="linear_interpolation"/>
+
+  <include file="$(find realsense2_camera)/launch/rs_t265.launch">
+    <arg name="serial_no"                value="$(arg serial_no)"/>
+    <arg name="camera"                   value="$(arg camera)"/>
+    <arg name="tf_prefix"                value="$(arg tf_prefix)"/>
+    <arg name="odom_frame_id"            value="$(arg odom_frame_id)"/>
+    <arg name="topic_odom_in"            value="$(arg topic_odom_in)"/>
+    <arg name="calib_odom_file"          value="$(arg calib_odom_file)"/>
+    <arg name="publish_odom_tf"          value="$(arg publish_odom_tf)"/>
+    <arg name="unite_imu_method"         value="$(arg unite_imu_method)"/>
+  </include>
+
+  <include file="$(find realsense2_camera)/launch/fox$(arg robot_id)/t265_transform_fox.launch"/>
+
+  <node
+    name="odom_transform"
+    pkg="realsense2_camera"
+    type="odom_transform"
+    args="$(arg camera)/odom/sample odom camera_odom_frame"
+    required="true"
+  >
+    <remap from="odometry_transformed" to="leadfoot/zippy/visual_odom"/>
+  </node>
+
+</launch>
